@@ -1,0 +1,51 @@
+<div class="sub-banner">
+	<div class="container-fluid">
+		<div class="row">
+				<img src="<?php echo asset('assets/images/membership.jpg'); ?>" class="img-responsive" alt="RAM Owners Club">
+		</div>
+	</div>
+	<div class="subcaption">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<h3>Payment Page</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container">
+	<div class="row">
+		<div class="col-lg-12 col-md-12 col-sm-12">
+			<div class="form-container" id="memberForm">
+				<div id="notification-form"></div>
+				<h2>Complete Membership <small>payment</small></h2>
+
+
+				 <div class="col-lg-12">
+				 <h4>Ram Owners Kommunity</h4>
+
+				<address>
+				  Fullname: <?php echo $rsMember->firstname; ?> <?php echo $rsMember->lastname; ?> <br/>
+				  Mobile: <?php echo $rsMember->mobile; ?><br>
+				  Email Address: <?php echo $rsMember->email; ?> <br>
+				</address>
+				</address>
+				<p>Price: 500 AED</p>
+				</div>
+			
+				 <hr/>
+				 <div class="col-lg-6">
+				 	<a href="javascript:paymentPage()" class="btn btn-default btn-success">Pay Membership</a>
+				 </div>
+			</div>
+		</div>
+	
+	</div>
+</div>
+
+<script>
+function paymentPage() {
+	alert('Payment not ready.');
+}
+</script>

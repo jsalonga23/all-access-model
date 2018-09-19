@@ -1,0 +1,101 @@
+<div class="member-banner">
+	<div class="membercaption">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+					<h3>Member Dashboard</h3>
+				</div>
+				<div class="col-lg-6">
+					<h3 class="pull-right">Hi! <?php echo Auth::User()->firstname; ?>,
+						<span>
+							<a href="<?php echo URL::to('/members/logout'); ?>" style="color: red;font-size: 15px;">Logout</a>
+						</span>
+					</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container">
+	<div class="row">
+		<div class="col-lg-3 col-md-3">
+			<ul class="side-navigation">
+				<li>
+					<a href="<?php echo URL::to('/members/dashboard'); ?>">
+						My Account
+					</a>
+				</li>
+				<li>
+					<a href="<?php echo URL::to('member/participants'); ?>">
+						Joined Event
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="col-lg-9 col-md-9">
+			<div class="account-wrapper">
+				 <?php echo $__env->make('layouts.administrator.includes.error', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+				<?php echo Form::open(array('url' => 'member/dashboard/edit/submit','role'=>'form',  'method' => 'post','id'=>'memberInfo', 'enctype'=>'multipart/form-data')); ?>
+
+			
+				<div class="row">
+	                <div class="col-lg-4 col-md-4">
+	                    <div class="form-group">
+	                        <label for="txtMemberId">Member ID</label>
+	                        <input type="text" disabled class="form-control" id="txtMemberId" aria-describedby="emailHelp" name="txtMemberId" placeholder="Member ID" value="<?php echo Auth::User()->member_id; ?>">
+	                    </div>
+	                </div>
+	                <div class="col-lg-4 col-md-4">
+	                    <div class="form-group">
+	                        <label for="txtstartMem">Start Membership</label>
+	                        <input type="text" disabled class="form-control" id="txtstartMem" aria-describedby="emailHelp" name="txtstartMem" placeholder="" value="<?php echo Auth::User()->start_date; ?>">
+	                    </div>
+	                </div>
+	                <div class="col-lg-4 col-md-4">
+	                    <div class="form-group">
+	                        <label for="txtendMem">End Membership</label>
+	                        <input type="text" disabled class="form-control" id="txtendMem" aria-describedby="emailHelp" name="txtendMem" placeholder="" value="<?php echo Auth::User()->end_date; ?>">
+	                    </div>
+	                </div>
+	            </div>
+	            <div class="row">
+	                <div class="col-lg-6 col-md-6">
+	                     <div class="form-group">
+	                        <label for="txtName">Firstname</label>
+	                        <input type="text" class="form-control" id="txtName" aria-describedby="emailHelp" required name="txtFirstname" placeholder="First Name" value="<?php echo Auth::User()->firstname; ?>">
+	                    </div>
+	                </div>
+	                <div class="col-lg-6 col-md-6">
+	                     <div class="form-group">
+	                        <label for="txtName">Lastname</label>
+	                        <input type="text" class="form-control" id="txtLastname" aria-describedby="emailHelp" required name="txtLastname" placeholder="Last Name" value="<?php echo Auth::User()->lastname; ?>">
+	                    </div>
+	                </div>
+	            </div>
+	            <div class="row">
+	            	<div class="col-lg-6 col-md-6">
+	                     <div class="form-group">
+	                        <label for="txtEmail">Email Address</label>
+	                        <input type="email" required class="form-control" id="txtEmail" aria-describedby="emailHelp" name="txtEmail" placeholder="Email Address" value="<?php echo Auth::User()->email; ?>">
+	                    </div>
+	                </div>
+	                <div class="col-lg-6 col-md-6">
+	                     <div class="form-group">
+	                        <label for="txtMobile">Mobile Number</label>
+	                        <input type="tel" required class="form-control" id="txtMobile" aria-describedby="emailHelp" name="txtMobile" placeholder="Mobile Number" value="<?php echo Auth::User()->mobile; ?>">
+	                    </div>
+	                </div>
+	            </div>
+	            <div class="row">
+	            	<div class="col-lg-12">
+	            		<div class="pull-right">
+	            			<input type="submit" class="btn btn-submit btn-primary" value="Save">
+	            		</div>
+	            	</div>
+	            </div>
+	            <?php echo Form::close(); ?>
+
+            </div>
+		</div>
+	</div>
+</div>

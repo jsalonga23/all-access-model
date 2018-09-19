@@ -1,0 +1,54 @@
+<div class="sub-banner">
+	<div class="container-fluid">
+		<div class="row">
+				<img src="<?php echo asset('assets/images/faqs.jpg'); ?>" class="img-responsive" alt="RAM Owners Club">
+		</div>
+	</div>
+	<div class="subcaption">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<h3>FAQS</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container">
+	<div class="row">
+		<div class="col-lg-12">
+			<p class="header">What type of events do you do?</p>
+			<p>The kommunity will host two types of events the desert tours events and the meet and greet events.</p>
+
+			<p class="header">How many events per year do you have?</p>
+			<p>The kommunity will ideally have four desert tour events and six meet and greet events.</p>
+
+			<p class="header">Can my friends attend the event?</p>
+			<p>Friends and family are always welcome.</p>
+
+			<p class="header">How do I register for the event?</p>
+			<p>Go to events page, choose the event, at the bottom of the page there is a button called register; just click there and follow the instructions.</p>
+
+			<p class="header">Can I register my friend and his car to the event through my membership?</p>
+			<p>Of course you may but you need to email the details to <span><a href="mailto:info@ramownerskommunity.com">info@ramownerskommunity.com</a></span></p>
+
+			<p class="header">How do I renew my membership?</p>
+			<p>Login to your account click on membership and follow the steps.</p>
+
+			<p class="header">If I miss to renew my membership, will I have to pay for previous period?</p>
+			<p>Your payment will be for a year from the date you renew your membership.</p>
+
+			<p class="header">How do I upload pictures to the gallery?</p>
+			<p>Login to your account, go to gallery, choose the event and at the bottom of the page click on upload.</p>
+
+			<p class="header">How many pictures can I upload?</p>
+			<p>You may upload as many pictures as you want provided the size in less than 900mb.</p>
+
+			<p class="header">If the pictures are not uploading what do I do?</p>
+			<p>Please contact us through <span><a href="mailto:info@ramownerskommunity.com">info@ramownerskommunity.com</a></span></p>
+
+			<p class="header">Who do I contact in case of any inquiries?</p>
+			<p>Please contact Adel Arslan mobile <span><a href="tel:+971507256027">+971507256027</a></span></p></p>
+		</div>
+	</div>
+</div>

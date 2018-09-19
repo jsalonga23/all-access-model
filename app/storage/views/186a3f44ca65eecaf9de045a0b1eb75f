@@ -1,0 +1,108 @@
+<div class="sub-banner">
+	<div class="container-fluid">
+		<div class="row">
+				<img src="<?php echo asset('assets/images/membership.jpg'); ?>" class="img-responsive" alt="RAM Owners Club">
+		</div>
+	</div>
+	<div class="subcaption">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<h3>Membership</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container">
+	<div class="row">
+		<div class="col-lg-6 col-md-6 col-sm-6">
+			<div class="form-container" id="memberForm">
+				<div id="notification-form"></div>
+				 <?php echo Form::open(array('url' => 'membership/add/submit','role'=>'form',  'method' => 'post','id'=>'membershipForm')); ?>
+
+				 	<div class="row">
+				 		<div class="col-lg-6 col-md-6">
+				 			<div class="form-group">
+							    <label for="InputName">First Name</label>
+							    <input type="text" name="txtFName" class="form-control" id="InputName" aria-describedby="emailHelp" placeholder="First Name" required>
+							</div>
+				 		</div>
+				 		<div class="col-lg-6 col-md-6">
+				 			<div class="form-group">
+							    <label for="InputName">Last Name</label>
+							    <input type="text" name="txtLName" class="form-control" id="InputName" aria-describedby="emailHelp" placeholder="Last Name" required>
+							</div>
+				 		</div>
+				 	</div>
+					<div class="form-group">
+					    <label for="InputEmail">Email address</label>
+					    <input type="email" name="txtEmail" class="form-control" id="InputEmail" aria-describedby="emailHelp" placeholder="Email Address" required>
+					</div>
+					<div class="row">
+						<div class="col-lg-12">
+							<label for="InputMobile">Mobile Number</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-2 col-md-2">
+							<input type="tel" name="txtAreaCode" class="form-control" id="InputMobile" placeholder="+971" aria-describedby="emailHelp" value="+971" readonly>
+						</div>
+						<div class="col-lg-3 col-md-3">
+							<div class="form-group">
+								<select class="form-control" name="txtMobileCode">
+								      <option>50</option>
+								      <option>52</option>
+								      <option>54</option>
+								      <option>55</option>
+								      <option>56</option>
+								  </select>
+						  	</div>
+						</div>
+						<div class="col-lg-7 col-md-7">
+							<div class="form-group">
+							    <input type="tel" name="txtMobileNumber" class="form-control" id="InputMobile" aria-describedby="emailHelp" placeholder="Mobile Number" onkeypress="return isNumber(event)" maxlength="7" required>
+							</div>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col-lg-6 col-md-6">
+							<div class="form-group">
+							    <label for="InputMobile">Password</label>
+							    <input type="password" name="txtPassword" class="form-control" id="InputPass" aria-describedby="emailHelp" placeholder="Password" required>
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-6">
+							<div class="form-group">
+							    <label for="InputMobile">Confirm Password</label>
+							    <input type="password" name="txtConfPassword" class="form-control" id="InputConfPass" aria-describedby="emailHelp" placeholder="Password" required>
+							</div>
+						</div>
+					</div>
+					
+					
+					  <button type="submit" class="btn btn-submit btn-primary align-right">Submit</button>
+					<div class="clear"></div>
+				 <?php echo Form::close(); ?>
+
+			</div>
+		</div>
+		<div class="col-lg-6 col-md-6 col-sm-6">
+			<div class="benefits-container">
+				<p class="header">What do you get from joining?</p>
+				<ul>
+					<li>ROK membership card</li>
+					<li>ROK membership sticker</li>
+					<li>Welcome kit</li>
+					
+					<li>Attending amazing events that will be prepared over the course of the year</li>
+					<li>Meet like minded people who are dedicated to the brand</li>
+					<li>Communicate with other members to share the knowledge for any project</li>
+					<li>RAM Dealer deals (under negotiation)</li>
+					<li>Offroad-Zone special deals on service and parts</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>

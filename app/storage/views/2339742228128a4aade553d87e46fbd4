@@ -1,0 +1,40 @@
+<div class="admin-logo">
+    <a href="<?php echo URL::to('/'); ?>"><img src="<?php echo asset('admin/images/logo.png'); ?>" class="img-responsive"></a>
+</div>
+
+<div class="login-panel panel panel-default">
+
+    <div class="panel-heading">
+        <h3 class="panel-title">Enter your password</h3>
+    </div>
+
+    <?php echo $__env->make('layouts.administrator.includes.error', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+    
+    <div class="panel-body">
+        <?php echo Form::open(array('url' => 'register/reset/submit','role'=>'form',  'method' => 'post')); ?>
+
+            <fieldset>
+                
+
+                <div class="form-group <?php if($errors->has('password')): ?> has-error <?php endif; ?>">
+                    <input class="form-control" placeholder="Password" name="txtPassword" type="text" value="">
+                    <?php if($errors->has('txtPassword')): ?> <p class="help-block"><?php echo $errors->first('txtPassword'); ?></p> <?php endif; ?>
+                </div>
+                  <div class="form-group  <?php if($errors->has('txtConfirmPassword')): ?> has-error <?php endif; ?>">
+                    <input class="form-control" placeholder="Confirm Password" name="txtConfirmPassword" type="text" value="<?php echo Input::old('txtConfirmPassword'); ?>">
+                    <?php if($errors->has('txtConfirmPassword')): ?> <p class="help-block"><?php echo $errors->first('txtConfirmPassword'); ?></p> <?php endif; ?>
+                </div>
+                <br/>
+                
+                 <input type="hidden" name="txtConfirmationcode" value="<?php echo $confirmCode; ?>">
+
+                <!-- Change this to a button or input when using this as a form -->
+                <input type="submit" class="btn btn-lg btn-success btn-block" value="Submit">
+            </fieldset>
+
+            
+        <?php echo Form::close(); ?>
+
+    </div>
+
+</div>

@@ -1,0 +1,83 @@
+<div class="sub-banner">
+	<div class="container-fluid">
+		<div class="row">
+				<img src="<?php echo asset('assets/images/contactus.jpg'); ?>" class="img-responsive" alt="RAM Owners Club">
+		</div>
+	</div>
+	<div class="subcaption">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<h3>Contact Us</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container">
+	<div class="row">
+		<div class="col-lg-9 col-md-9 col-sm-6">
+			<div class="form-container" id="inquireForm">
+				<p>For further inquires, send us a message:</p>
+				<div id="notification-form"></div>
+				 <?php echo Form::open(array('url' => 'contact/inquiry/submit','role'=>'form',  'method' => 'post','id'=>'inquiryForm')); ?>
+
+				 	<div class="form-group">
+					    <label for="InputName">Your Name</label>
+					    <input type="text" name="txtName" class="form-control" id="InputName" aria-describedby="emailHelp" placeholder="Full Name" required>
+					</div>
+					<div class="row">
+						<div class="form-group col-lg-6 col-md-6 col-sm-6">
+						    <label for="InputEmail">Email address</label>
+						    <input type="email" name="txtEmail" class="form-control" id="InputEmail" aria-describedby="emailHelp" placeholder="Email Address" required>
+						</div>
+
+						<div class="form-group col-lg-6 col-md-6 col-sm-6">
+						    <label for="InputMobile">Mobile Number</label>
+						    <!-- <input type="tel" name="txtMobileNumber" class="form-control" id="InputMobile" aria-describedby="emailHelp" placeholder="Mobile Number" > -->
+
+						    <div class="row">
+								<div class="col-lg-3 col-md-3">
+									<input type="tel" name="txtAreaCode" class="form-control" id="InputMobile" placeholder="+971" aria-describedby="emailHelp" value="+971" readonly>
+								</div>
+								<div class="col-lg-3 col-md-3">
+									<div class="form-group">
+										<select class="form-control" name="txtMobileCode">
+										      <option>50</option>
+										      <option>52</option>
+										      <option>54</option>
+										      <option>55</option>
+										      <option>56</option>
+										      <option>58</option>
+										  </select>
+								  	</div>
+								</div>
+								<div class="col-lg-6 col-md-6">
+									<div class="form-group">
+									    <input type="tel" name="txtMobileNumber" class="form-control" id="InputMobile" aria-describedby="emailHelp" placeholder="Mobile Number" onkeypress="return isNumber(event)" maxlength="7" required>
+									</div>
+								</div>
+							</div>
+
+
+						    <small id="emailHelp" class="form-text text-muted" required>Please include Area Code and Country Code</small>
+						</div>
+					
+					</div>
+					<div class="form-group">
+					    <label for="txtMessage">Message</label>
+					    <textarea class="form-control" name="txtMessage" id="txtMessage" rows="5"></textarea>
+					  </div>
+					
+					  <button type="submit" class="btn btn-submit btn-primary align-right">Submit</button>
+					<div class="clear"></div>
+				 <?php echo Form::close(); ?>
+
+			</div>
+		</div>
+		<div class="col-lg-3 col-md-3 col-sm-6">
+			<div class="contacts-container">
+			</div>
+		</div>
+	</div>
+</div>

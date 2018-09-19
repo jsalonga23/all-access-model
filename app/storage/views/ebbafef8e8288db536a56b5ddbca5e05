@@ -1,0 +1,22 @@
+<div class="container">
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="sponsors">
+				<div class="lbl">
+					<h3>OUR SPONSORS</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-lg-12">
+			<ul class="sponsor-slider">
+				<?php foreach($rsSponsors as $item): ?>
+
+					<li><img src="<?php echo asset('assets/images/sponsors/'. $item->logo); ?>" /></li>
+
+				<?php endforeach; ?>
+			</ul>
+		</div>
+	</div>
+</div>

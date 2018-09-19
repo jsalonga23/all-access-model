@@ -1,0 +1,98 @@
+
+<!-- Modal -->
+<div id="addNewEvent" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+
+      {{ Form::open(array('url' => 'data/events/add/submit','role'=>'form',  'method' => 'post','id'=>'eventsInfo', 'enctype'=>'multipart/form-data')) }}
+                 
+
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">New Event</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+              <div class="col-lg-12">
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox" name="chkActive"> <abbr title="This will be available online">Active</abbr>&nbsp;&nbsp;
+                    </label>
+                </div>
+
+                 <div class="checkbox">
+                    <label>
+                      <input type="checkbox" name="chkClosed" value="1"> <abbr title="This will be available online">Closed Event</abbr>&nbsp;&nbsp;
+                    </label>
+                </div>
+                
+              </div>
+          </div>
+          <br/>
+
+          <div class="row">
+              <div class="col-lg-12">
+                  <div class="form-group">
+                      <label for="txtEventName">Event Name</label>
+                      <input type="text" class="form-control" id="txtEventName" aria-describedby="emailHelp" name="txtEventName" placeholder="Event Name" required>
+                  </div>
+              </div>
+            
+              <div class="col-lg-12">
+                  <div class="form-group">
+                      <label for="txtStartDate">Event Date</label>
+                      <div class='input-group date' id='txtStartDate'>
+                          <input type='text' name="txtStartDate" class="form-control" required />
+                          <span class="input-group-addon">
+                              <span class="glyphicon glyphicon-calendar"></span>
+                          </span>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="col-lg-12">
+                  <div class="form-group">
+                      <label for="txtStartDate">Closing Date</label>
+                      <div class='input-group date' id='txtStartDate'>
+                          <input type='text' name="txtClosingDate" class="form-control" required />
+                          <span class="input-group-addon">
+                              <span class="glyphicon glyphicon-calendar"></span>
+                          </span>
+                      </div>
+                  </div>
+              </div>
+
+
+          </div>
+        
+           <div class="row">
+              <div class="col-lg-12">
+                    <label for="txtStartDate">Upload Image</label>
+                    <input type="file" class="form-control-file" id="imageEventPrimary" aria-describedby="fileHelp" name="file">
+                    <span class="text-muted"><small>You can upload only jpeg, jpg and png format</small></span>
+              </div>
+            </div>
+
+            <br/>
+            <div class="row">
+              <div class="col-lg-12">
+                    <label for="txtStartDate">Upload File</label>
+                    <input type="file" class="form-control-file" id="pdfFile" aria-describedby="fileHelp" name="filepdf">
+                    <span class="text-muted"><small>You can upload only *pdf format</small></span>
+              </div>
+          </div>
+      </div>
+
+      <div class="modal-footer">
+         <input type="submit" class="btn btn-primary " value="Save and Continue">
+
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+     {{ Form::close() }}
+
+  </div>
+</div>

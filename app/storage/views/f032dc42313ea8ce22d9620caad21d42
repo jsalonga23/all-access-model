@@ -1,0 +1,29 @@
+<?php if($errors->has()): ?>
+	<div class="panel-body">
+	 	<div class="alert alert-danger green">
+ 			<ul>
+	            <?php foreach($errors->all() as $error): ?>
+	                <li><?php echo $error; ?></li>
+	            <?php endforeach; ?>
+	        </ul>
+	    </div>
+	</div>
+<?php endif; ?>
+
+<?php if(Session::has('message_error')): ?>
+	<div class="panel-body popup_message_error red">
+	 	<div class="alert alert-danger">
+				<?php echo Session::get('authenticated_message'); ?><br/>
+	 	</div>
+	</div>
+<?php endif; ?>
+
+<?php if(Session::has('message_success')): ?>
+	<div class="panel-body">
+	 	<div class="alert alert-success green">
+				<?php echo Session::get('authenticated_message'); ?><br/>
+	 	</div>
+	</div>
+<?php endif; ?>
+
+

@@ -1,0 +1,49 @@
+<!-- BANNER -->
+<div class="banner">
+	<div id="wrapper">
+	    <div class="slider-wrapper theme-default">
+	        <div id="slider" class="nivoSlider">
+	        	<img src="<?php echo asset('assets/images/banner3.jpg'); ?>" alt="" title="RAM Owners Club" />
+	            <img src="<?php echo asset('assets/images/banner1.jpg'); ?>" alt="" title="RAM Owners Club" />
+	            <img src="<?php echo asset('assets/images/banner2.jpg'); ?>" alt="" title="RAM Owners Club" />
+	        </div>
+	    </div>
+	</div>
+</div>
+<!-- /BANNER -->
+<!-- SPONSORS -->
+<?php echo $__env->make('layouts.front.views.pages.includes.sponsors', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<!-- /SPONSORS -->
+<!-- EVENTS -->
+<?php echo $__env->make('layouts.front.views.pages.includes.events', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<!-- JOIN US -->
+<div class="container">
+	<div class="join-container">
+		<div class="row">
+			<div class="col-lg-4 col-lg-push-8 col-md-6 col-md-push-6">
+				<div class="join-caption">
+					<h3>Join Us Now</h3>
+					<p>You are one click away from being part of an unparalleled community that is ardent for the greatest trucks brand in the world.</p>
+					<a href="<?php echo URL::to('membership'); ?>" class="btn-lg">REGISTER</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- /JOIN US -->
+<!-- About the Club-->
+<div class="container">
+	<div class="row">
+
+		<?php echo $__env->make('layouts.front.views.pages.includes.announcement', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+		<div class="col-lg-6 col-md-6 col-sm-6 welcome-note">
+			<p class="header">Dear RAM Trucks Enthusiasts,</p>
+			<p>This Ram Owners Kommunity will serve as a platform to bring together like minded people who love the RAM brand and want to share activities, events and knowledge with each other. Through ROK we are sure friendships will be sown and collaborations for various projects whether lifting, lowering, improving or even servicing your truck will happen. As a niche brand RAM offers us one of the best built trucks in the motoring world around which a great and passionate community is building up.</p>
+			<br>
+			<p>Hope you will enjoy ROK and meet as many great people as possible.</p>
+			<p class="header">Ram Owners Kommunity - UAE</p>
+		</div>
+	</div>
+</div>
+<!-- /About the Club-->

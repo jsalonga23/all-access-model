@@ -1,0 +1,373 @@
+<div class="sub-banner">
+	<div class="container-fluid">
+		<div class="row">
+				<img src="<?php echo asset('assets/images/gallery.jpg'); ?>" class="img-responsive" alt="RAM Owners Kommunity ">
+		</div>
+	</div>
+	<div class="subcaption">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<h3>Bylaws</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container" oncontextmenu="return false">
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="lbl-head">
+				<h2>ARTICLE I:  NAME & PURPOSE</h2>
+				<hr>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-lg-12">
+			<h4 class="bold">Section A: Name </h4>
+			<p>The name of the club shall be RAM Owners Kommunity – United Arab Emirates (hereinafter referred to as the club or ROK) with the name written in proper sequence with no deviations. This name shall not be changed unless permission has first been obtained by way of voting during general assembly.
+			</p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-lg-12">
+			<h4 class="bold">Section B: Purpose  </h4>
+			<p>The purpose of this Kommunity shall be:</p>
+			<ul>
+				<li>To bring together a group of like minded people with the purpose to create community revolved around the RAM brand.</li>
+				<li>To plan and realize exciting events and get together.</li>
+				<li>To help guide members to the best solutions for their intended improvements.</li>
+				<li>To recruit members and help market the RAM brand in the UAE.</li>
+				<li>To communicate with various RAM clubs in the region and discuss general issues and if possible plan joint events.</li>
+			</ul>
+		</div>
+	</div>
+
+	<?php /* Article2 */ ?>
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="lbl-head">
+				<h2>ARTICLE II:  MEMBERSHIP & DUES</h2>
+				<hr>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-lg-12">
+			<h4 class="bold">Section A: Eligibility</h4>
+			<p>Membership shall be open to any person who owns a Ram and willing to support the goals and purpose of the Kommunity and willing to pay the annual fees as outlined in Section B.</p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-lg-12">
+			<h4 class="bold">Section B: Dues </h4>
+			<p>Dues shall be AED 300 per year. </p>
+		</div>
+	</div>
+
+	<?php /* Article3 */ ?>
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="lbl-head">
+				<h2>ARTICLE III:  OFFICERS</h2>
+				<hr>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-lg-12">
+			<h4 class="bold">Section A: Officers </h4>
+			<p>The officers shall be:</p>
+			<ul>
+				<li>One President</li>
+				<li>One Treasurer</li>
+				<li>One Operations officer</li>
+			</ul>
+			<p>New positions can only be added by voting in the general assembly after a special meeting request has been called for with a minimum of 50 active members attending. The vote will pass with simple majority. Should the Kommunity have less than 50 active members, 51% of the members have to be present to allow the vote to be made and pass. (Active members meaning members with membership fees paid for the current year)</p>
+		</div>
+	</div>
+	<!-- <div class="row">
+		<div class="col-lg-12">
+			<h4 class="bold">Section B: Dues </h4>
+			<p>Dues shall be AED 300 per year. </p>
+		</div>
+	</div> -->
+	<div class="row">
+		<div class="col-lg-12">
+			<h4 class="bold">Section B: Eligibility</h4>
+			<p>Officers must be members of the Kommunity for a year or more, living in the United Arab Emirates (UAE), owning a RAM (any model), committed with a valid membership. (Valid membership means yearly fees paid for the current year).</p>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-lg-12">
+			<h4 class="bold">Section C: Election</h4>
+			<p>The officers shall be elected by ballot at the closing meeting of the year before the new events calendar year starts by a majority of the vote cast for that office.</p>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-lg-12">
+			<h4 class="bold">Section D: Term</h4>
+			<p>The officers shall serve for a maximum period of two consecutive terms. Each term shall be three years from the date of handover that should not be later than a month after the elections date.</p>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-lg-12">
+			<h4 class="bold">Section E: Vacancy </h4>
+			<p>If a vacancy occurs in the office of President, the Operations shall assume the office for the remainder of the term and vacancies in any other office shall be filled by appointment after careful consideration of applicants by the two current officers.</p>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-lg-12">
+			<h4 class="bold">Section F: Annual meeting</h4>
+			<p>All elected officers shall prepare a report for the annual meeting. An annual report shall be submitted to the regional Fiat Chrysler Automobiles NV office of the brand (Hereinafter known as FCA) at the end of each club calendar year.</p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-lg-12">
+			<h4 class="bold">Section G: Remuneration </h4>
+			<p>All elected officers shall understand that the Kommunity is a nonprofit organization and no financial remuneration shall be granted for the work. All officers shall be doing this voluntarily and as part of their community service.</p>
+		</div>
+	</div>
+
+	<?php /* Article 4 */ ?>
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="lbl-head">
+				<h2>ARTICLE IV:  DUTIES OF OFFICERS</h2>
+				<hr>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-lg-12">
+			<h4 class="bold">Section A: President  </h4>
+			<p>It shall be the duty of the President to:</p>
+			<ul>
+				<li>Preside at meetings </li>
+				<li>Vote only in case of a tie </li>
+				<li>Represent the Kommunity </li>
+				<li>Serve as a liaison between the Kommunity and the Brand</li>
+				<li>Serve as a liaison between the Kommunity and the Dealer  (In UAE _ _ _ _ _ _ )</li>
+				<li>Serve as the official spokesperson of the Kommunity </li>
+				<li>Perform such other duties as ordinarily pertain to this office</li>
+				<li>Conduct spot checks on the filing and documentation to ensure all documents are available and in order</li>
+				<li>Sign on withdrawal of the funds of the Kommunity</li>
+				<li>Negotiate sponsorship on behalf of the Kommunity</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-lg-12">
+			<h4 class="bold">Section B: Treasurer </h4>
+			<p>It shall be the duty of the Treasurer to:</p>
+			<ul>
+				<li>Collect all monies due to the Kommunity</li>
+				<li>Deposit Kommunity funds in the bank account </li>
+				<li>Process Request for Payment</li>
+				<li>Keep an itemized account of all receipts and expenditures and make reports as directed</li>
+				<li>Prepare all books for auditing</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-lg-12">
+			<h4 class="bold">Section C: Operations  </h4>
+			<p>It shall be the duty of the Operations officer to: </p>
+			<ul>
+				<li>Preside in the absence of the president </li>
+				<li>Record the minutes of all meetings  </li>
+				<li>Keep a file of the Kommunity’s records </li>
+				<li>Maintain a current roster of membership </li>
+				<li>Issue notices of meetings and conduct the general correspondence of the Kommunity</li>
+				<li>Execute events in collaboration with the president and the treasurer</li>
+				<li>Communicate with venues to get quotes and deals</li>
+				<li>Communicate with members on upcoming events and registrations</li>
+				<li>Bring it to the attention of the president if any issue is unresolved immediately or needs special attention</li>
+			</ul>
+		</div>
+	</div>
+
+	<?php /* Article 5 */ ?>
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="lbl-head">
+				<h2>ARTICLE V:  MEETINGS</h2>
+				<hr>
+			</div>
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="col-lg-12">
+			<h4 class="bold">Section A: Meetings  </h4>
+			<p>Regular meetings shall be held during the Kommunity’s calendar year.</p>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-lg-12">
+			<h4 class="bold">Section C: Quorum  </h4>
+			<p>A quorum shall consist of a minimum of 50 active members. (Active members meaning members with membership fees paid for the current year).</p>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-lg-12">
+			<h4 class="bold">Section D: Parliamentary Authority   </h4>
+			<p>Robert’s Rules of Orders shall govern this Kommunity in all cases to which they are applicable and in which they are not inconsistent with these bylaws.</p>
+		</div>
+	</div>
+
+	<?php /* Article 6 */ ?>
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="lbl-head">
+				<h2>ARTICLE VI:  EXECUTIVE COMMITTEE</h2>
+				<hr>
+			</div>
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="col-lg-12">
+			<h4 class="bold">Section A: Responsibility  </h4>
+			<p>Management of this Kommunity shall be vested in an Executive Committee responsible to the entire membership to uphold these bylaws.</p>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-lg-12">
+			<h4 class="bold">Section B: Membership  </h4>
+			<p>This committee shall consist of the officers as listed in Article III and the faculty advisor.</p>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-lg-12">
+			<h4 class="bold">Section C: Meetings  </h4>
+			<p>This committee shall meet at least once between regular meetings of the Kommunity to organize and plan future activities</p>
+		</div>
+	</div>
+
+	<?php /* Article 7 */ ?>
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="lbl-head">
+				<h2>ARTICLE VII:  ADVISOR</h2>
+				<hr>
+			</div>
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="col-lg-12">
+			<h4 class="bold">Section A: Selection  </h4>
+			<p>There shall be an advisor from FCA who shall be appointed by the executive committee.</p>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-lg-12">
+			<h4 class="bold">Section B: Duties </h4>
+			<p>The responsibilities of advisor shall be to:</p>
+			<ul>
+				<li>Maintain an awareness of the activities and programs sponsored by the FCA. </li>
+				<li>Meet on a regular basis with the president of the Kommunity to discuss upcoming meetings, events, goals and problems of the Kommunity</li>
+				<li>Attend regular meetings, executive board meetings as often as schedule allows</li>
+				<li>Assist in planning of events whenever possible</li>
+				<li>Relay any information from the brand to the executive committee of the Kommunity and vise versa</li>
+				<li>Maintain contact with the members</li>
+				<li>Provide direction in the area of parliamentary procedure, meeting facilitation, group-building, goal setting and events planning.</li>
+				<li>Assist the Kommunity treasurer in monitoring expenditures, fundraising activities, and corporate sponsorship to maintain an accurate and up-to-date account ledger.</li>
+				<li>Inform Kommunity members of those factors that constitute unacceptable behavior on the part of the Kommunity members, and the possible consequence of said behaviors.</li>
+			</ul>
+		</div>
+	</div>
+
+	<?php /* Article 8 */ ?>
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="lbl-head">
+				<h2>ARTICLE VIII:  COMMITTEES</h2>
+				<hr>
+			</div>
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="col-lg-12">
+			<h4 class="bold">Section A: Program Committee </h4>
+			<p>An events committee composed of the Operations as chairperson and four other active members shall be appointed by the President before the end of the events calendar year, whose duty shall be to plan the overall program of the Kommunity.</p>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-lg-12">
+			<h4 class="bold">Section B: Other/Special Committees</h4>
+			<p>The President shall have the authority to appoint any other or special committees, with the approval of the Executive Committee, from time to time as need demands.</p>
+		</div>
+	</div>
+
+	<?php /* Article 9 */ ?>
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="lbl-head">
+				<h2>ARTICLE IX:  AMENDMENTS</h2>
+				<hr>
+			</div>
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="col-lg-12">
+			<h4 class="bold">Section A: Selection </h4>
+			<p>These bylaws may be amended or additional paragraphs added by a 50 active member’s majority vote of the chapter membership. If quorum is less than 50 then another date will be set to gather the right number of attendees if at that new date quorum is less than 50 then a simple majority vote will be accepted.</p>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-lg-12">
+			<h4 class="bold">Section B: Notice </h4>
+			<p>All members shall receive advance notice of the proposed amendment at least five working days before the meeting. All members shall be informed of the meeting date two weeks ahead of the set date. If the discussion of the amendments did not conclude during the set meeting a following meeting date and time to be set to finalize the discussion and vote.</p>
+		</div>
+	</div>
+
+	<?php /* Article 10 */ ?>
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="lbl-head">
+				<h2>ARTICLE X:  DISSOLUTION</h2>
+				<hr>
+			</div>
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="col-lg-12">
+			<p>In the event of dissolution of this Kommunity to the extent allowed under applicable law, all of the assets of the Kommunity shall be returned to the FCA, the owner of the RAM brand, provided that the corporation is then in existence.</p>
+
+			<p>If the FCA should not be in existence at the time of said dissolution, then the assets of the Kommunity shall be sold and the proceeds distributed to nonprofit organizations operating exclusively for charitable, scientific, literary or educational purposes which shall be selected by the executive committee of this Kommunity</p>
+
+			<p>In the event that for any reason upon the dissolution of this Kommunity the executive committee shall fail to act in the manner herein provided, the assets shall be distributed in accordance with the law governing the distribution of assets of nonprofit organizations in the United Arab Emirates in which the Kommunity is located.</p>
+			
+			<br>
+			<br>
+			<p>Signed:</p>
+			<p>Founders of the RAM Owners Kommunity, United Arab Emirates</p>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-lg-12">
+			<p>March 15,2017 - Version 1 / 2017</p>
+		</div>
+	</div>
+
+</div>

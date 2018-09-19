@@ -1,0 +1,250 @@
+body {
+	font-family: 'Carrois Gothic', sans-serif!important;
+}
+/*Fonts*/
+@font-face {
+	font-family: 'fontawesome';
+	src: url('../fonts/fontawesome-webfont.eot');
+	src: url('../fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/fontawesome-webfont.woff') format('woff'),
+		 url('../fonts/fontawesome-webfont.ttf') format('truetype'),
+		 url('../fonts/fontawesome-webfont.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+/*Leslie*/
+.nav>li>a.removeAttribute,  .navbar-top-links li a.removeAttribute,  .navbar-top-links li:last-child.removeAttribute,  .removeAttribute,  .navbar-top-links li a.removeAttribute {
+	padding: 0 !important;
+	min-height: 1px !important;
+}
+.img-thumbnail-c {
+	width: 70% !important;
+}
+.ulCategory {
+	list-style: none;
+	margin: 3px;
+}
+.ulCategory li {
+	list-style: none;
+	margin: 3px;
+	border-bottom: 1px solid #d8d8d8;
+}
+.img-gallery {
+	margin: 0px -10px 14px 0px;
+}
+input[type='file'] {
+	width: 248px;
+	background-color: #d8d8d8;
+	font-size: 11px;
+}
+.class_action {
+	width: 120px;
+}
+.no-record {
+	font-size: 11px;
+}
+.td-photo {
+	width: 100px;
+}
+.gallery-menu {
+	padding: 5px;
+}
+ul#side-menu.nav li a:hover {
+	background: #343434;
+}
+ul#side-menu.nav li a {
+	color: #58595b !important;
+}
+ul#side-menu.nav li a:hover {
+	color: #fff !important;
+}
+.btn-primary {
+	background-color: #6e6f6f;
+	border-color: #6e6f6f;
+}
+.btn-primary:hover {
+	background-color: #e85858;
+	border-color: #e85858;
+}
+html body div#wrapper nav.navbar.navbar-default.navbar-static-top {
+	background-color: #fff;
+	height: 145px;
+}
+nav.navbar.navbar-default.navbar-static-top ul.nav.navbar-top-links.navbar-right li.dropdown a.dropdown-toggle,  ul.nav.navbar-top-links.navbar-right li div {
+	color: #FFF;
+}
+nav.navbar.navbar-default.navbar-static-top ul.nav.navbar-top-links.navbar-right li.dropdown a.dropdown-toggle:hover,  ul.nav.navbar-top-links.navbar-right li.dropdown a.dropdown-toggle:hover {
+	color: #e85858;
+}
+.table {
+	font-size: 14px !important;
+	text-transform: capitalize;
+}
+/*Form Member*/
+.marginform {
+	margin: 15px;
+}
+.hightlight {
+	background-color: #f6f6f6;
+}
+.v_color {
+	width: 30px;
+	height: 30px;
+	float: right;
+	margin: 0 20px 0 0;
+	border-radius: 50px!important;
+	border: 1px solid #ecebea !important;
+}
+.vblack {
+	background-color: #000000;
+}
+.vred {
+	background-color: #d50005;
+}
+.vgreen {
+	background-color: #4fab49;
+}
+.vblue {
+	background-color: #1712da;
+}
+.vyellow {
+	background-color: #ffff00;
+}
+.vpurple {
+	background-color: #7a32b6;
+}
+.vcyan {
+	background-color: #03ffff;
+}
+.vmagenta {
+	background-color: #74113f;
+}
+.vgray {
+	background-color: #C0C0C0;
+}
+.vwhite {
+	background-color: #FFFFFF;
+}
+.vpink {
+	background-color: #ff80ff;
+}
+.vbrown {
+	background-color: #7b3e00;
+}
+.vorange {
+	background-color: #ff8000;
+}
+.main_sub_total .summary_display {
+	float: left;
+	clear: both;
+	width: 250px;
+}
+.total {
+	font-size: 12px;
+}
+.mycart-total p {
+	font-size: 16px;
+}
+ul.places {
+	padding: 0;
+	margin: 0;
+}
+ul.places li {
+	list-style: none;
+}
+ul.experience_list {
+	padding: 0;
+	margin: 0 0 10px 20px;
+}
+ul.experience_list li {
+	list-style: none;
+	font-weight: none !important;
+}
+/*Additionals*/
+h1.page-header {
+	font-size: 25px;
+	font-weight: bold;
+}
+.sidebar {
+	margin-top: 145px!important;
+}
+.navbar-header {
+	height: 120px!important;
+	width: 100%;
+	text-align: center;
+	display: inline-block;
+	max-width: 250px;
+}
+table.table-bordered.dataTable {
+	font-size: 14px;
+}
+table.dataTable thead > tr > th {
+	padding-left: 10px!important;
+	padding-right: 10px!important;
+}
+i.fa {
+	color: #343434;
+	margin: 0 10px;
+	font-size: 20px;
+	font-family: 'fontawesome'!important;
+}
+i.fa:hover {
+	color: #d30e2a;
+}
+ul#side-menu.nav li a:hover i.fa {
+	color: #fff;
+}
+li.glyphicon {
+	background: #343434;
+}
+li a.glyphicon:hover {
+	background: none!important;
+}
+table.dataTable thead .sorting, table.dataTable thead .sorting_desc, table.dataTable thead .sorting_asc {
+	background: none!important;
+}
+.nav li a.removeAttribute:hover, .nav li a.removeAttribute:focus {
+	background: none!important;
+}
+.input-group .form-control {
+	height: 36px;
+}
+.user-active {
+    color: #555 !important;
+}
+.finishes, 
+.colors {
+	list-style: none;
+}
+.finishes li,
+.colors li  {
+	margin-bottom: 10px;
+}
+.finishes input[type=checkbox],
+.finishes input[type=radio],
+.colors input[type=checkbox], 
+.finishes input[type=radio] {
+	margin-right: 10px;
+}
+.thumb-image img {
+	width: 100%;
+}
+.colorpicker-element .add-on i, .colorpicker-element .input-group-addon i {
+    display: inline-block;
+    cursor: pointer;
+    height: 16px;
+    vertical-align: text-top;
+    width: 16px;
+    background-color: rgb(0, 0, 0);
+}
+.colorpicker.colorpicker-visible {
+	display: inline-block;
+}
+.navbar-default .navbar-brand {
+	max-width: 153px;
+	display: block;
+	width: 100%;
+	float: none;
+	margin: 0 auto;
+	padding: 0;
+}

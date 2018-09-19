@@ -1,0 +1,9 @@
+<div class="col-lg-6 col-md-6 col-sm-6 announcements">
+	<p class="header">Announcements</p>
+	<?php foreach($rsAnnouncement as $item): ?>
+	<div class="announcement-container">
+		<p><?php echo $item->title; ?></p>
+		<p>- <?php echo date('F d, Y', strtotime($item->date_created)); ?></p>
+	</div>
+	<?php endforeach; ?>
+</div>

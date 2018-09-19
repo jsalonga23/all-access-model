@@ -1,0 +1,31 @@
+<div class="admin-logo">
+    <a href="<?php echo URL::to('/'); ?>"><img src="<?php echo asset('admin/images/logo.png'); ?>" class="img-responsive"></a>
+</div>
+
+<div class="login-panel panel panel-default">
+
+    <div class="panel-heading">
+        <h3 class="panel-title">Forgot Password</h3>
+    </div>
+
+    <?php echo $__env->make('layouts.administrator.includes.error', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+    
+    <div class="panel-body">
+        <?php echo Form::open(array('url' => 'data/forgot-password/submit','role'=>'form',  'method' => 'post')); ?>
+
+            <fieldset>
+                <div class="form-group  <?php if($errors->has('txtEmailAddress')): ?> has-error <?php endif; ?>">
+                    <input class="form-control" placeholder="Enter Email address" name="txtEmailAddress" type="text" value="<?php echo Input::old('txtEmailAddress'); ?>">
+                    <?php if($errors->has('txtEmailAddress')): ?> <p class="help-block"><?php echo $errors->first('username'); ?></p> <?php endif; ?>
+                </div>
+                <!-- Change this to a button or input when using this as a form -->
+                <input type="submit" class="btn btn-lg btn-success btn-block" value="Submit">
+            </fieldset>
+
+          
+
+        <?php echo Form::close(); ?>
+
+    </div>
+
+</div>

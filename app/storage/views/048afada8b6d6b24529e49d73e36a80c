@@ -1,0 +1,21 @@
+<div id="page-wrapper">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header"><?php echo $pageTitle; ?></h1>
+            </div>
+            <!-- /.col-lg-12 -->
+        </div>
+        <!-- /.row -->
+        <?php if($pageAction=="view"): ?>
+            <?php echo $__env->make('layouts.administrator.view.committee.list', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+        <?php endif; ?>
+        <?php if($pageAction=="edit"): ?>
+            <?php echo $__env->make('layouts.administrator.view.committee.edit', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+        <?php endif; ?>
+        <?php if($pageAction=="add"): ?>
+            <?php echo $__env->make('layouts.administrator.view.committee.add', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+        <?php endif; ?>
+
+</div>
+        <!-- /#page-wrapper -->
+

@@ -1,0 +1,151 @@
+<div class="sub-banner">
+	<div class="container-fluid">
+		<div class="row">
+				<img src="<?php echo asset('assets/images/about.jpg'); ?>" class="img-responsive" alt="RAM Owners Club">
+		</div>
+	</div>
+	<div class="subcaption">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<h3>Event</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container">
+	<div class="row sorting">
+		<div class="col-lg-12">
+			<?php foreach($rsEventDetail as $item): ?>
+				<span>
+					<a href="<?php echo URL::to('/events/'.$item->year); ?>"><?php echo $item->year; ?></a>
+				</span>
+				<span>/</span>				
+				<span><?php echo $item->title; ?></span>
+			<?php endforeach; ?>
+		</div>	
+	</div>
+</div>
+			
+<?php foreach($rsEventDetail as $item): ?>
+<div class="container">
+	<div class="row">
+	
+		<?php echo $__env->make('layouts.front.includes.error', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+
+		<?php echo Form::open(array('url' => 'join/'.$item->page_url.'/submit','role'=>'form',  'method' => 'post','id'=>'','enctype'=>'multipart/form-data')); ?>
+
+
+
+		<input type="hidden" value="<?php echo $item->id; ?>" name="txtEventId">
+
+		<div class="col-lg-12 col-md-12 col-sm-12">
+			<h4 class="title-event"><?php echo $item->title; ?></h4>
+			<div class="eventDate">
+				<p><span>Event Date: <?php echo utilities::getDate($item->start_date); ?></span></p>
+			</div>
+			<!-- <div class="eventVenue">
+				<p><span>Venue: <?php echo $item->venue; ?></span></p>
+			</div> -->
+			<div class="eventDesc">
+				<?php echo $item->description; ?>
+
+			</div>
+
+			<?php if($item->file!=""): ?>
+			<a href="<?php echo asset('assets/images/events/'.$item->id.'/'.$item->file); ?>" class="btn btn-default btn-primary btn-sm">View Map</a>
+			<?php endif; ?>
+
+			 <?php 
+				$rsCategory = EventCategory::getCategoryByEventId($item->id);
+			 ?>
+
+			<div class="eventCategory">
+				<table class="table " style="margin-bottom: 20px;">
+					<thead>
+						<tr>
+							<td>Title</td>
+							<td>Description</td>
+							<td>No Participants</td>
+							<td>Fees</td>
+						</tr>
+					</thead>
+
+					<tbody>
+						<?php foreach($rsCategory as $list): ?>
+
+						<?php 
+
+							$rsParticipants = EventParticipants::getParticipantsByEventId($item->id);
+							if (count($rsParticipants)>0) {
+								$totalPartcipants = count($rsParticipants);	
+							}
+							else {
+								$totalPartcipants = 0;
+							}
+							
+							$totalMaxPeople = $list->max_people - $totalPartcipants;
+
+						?>
+						<tr>
+							<td nowrap><?php echo $list->title; ?></td>
+							<td style="font-size:11px;" width=""><?php echo nl2br($list->description); ?></td>
+							<td  width="150">	
+
+								<?php if($totalMaxPeople<=0): ?>
+									Category is Full
+								<?php else: ?> 
+									<input type="hidden" name="txtCategoryId[]" value="<?php echo $list->id; ?>">
+									<select name="optNumberParticipants[]" class="form-control">
+										
+										<option value="">Select No Participants</option>
+
+										<?php for($i=1;$i<=$totalMaxPeople;$i++): ?>
+											<option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+										<?php endfor; ?>
+									</select>
+								<?php endif; ?>
+							</td>
+							<td nowrap><?php echo utilities::getCurrectCurrency($list->fees); ?></td>
+						</tr>
+						<?php endforeach; ?>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+		
+		<div class="col-lg-4 col-md-4 col-sm-4">
+			<label>Number of Cars</label>
+		<input type="text" value="" name="txtTotalCars" placeholder="Number of Cars" class="form-control" required>
+		</div>
+
+
+		<?php if(Auth::Check()): ?>
+		<div class="col-lg-12 col-md-12 col-sm-12">
+			
+			<?php if($item->is_closed): ?>
+				<a href="javascript:alert('This Event is closed.')" class="btn btn-default btn-primary btn-sm">Event Closed</a> 
+			<?php elseif($item->end_date >= time() ): ?>
+				<a href="javascript:alert('This Event is closed.')" class="btn btn-default btn-primary btn-sm">Event Closed</a> 
+			<?php else: ?> 
+				<!-- <a href="<?php echo URL::to('join/'.$item->page_url); ?>" class="btn btn-default btn-primary btn-sm">Join Event!</a>  -->
+				<hr/>
+				<br/>
+				<input type="submit" value="Continue with Payment" class="btn btn-default btn-primary btn-sm">
+			<?php endif; ?>
+			
+		</div>
+		<?php endif; ?>
+
+
+		<?php echo Form::close(); ?>
+
+
+	</div>
+
+
+</div>
+<?php endforeach; ?>

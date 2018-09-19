@@ -1,0 +1,75 @@
+<div class="member-banner">
+	<div class="membercaption">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+					<h3>Member Dashboard</h3>
+				</div>
+				<div class="col-lg-6">
+					<h3 class="pull-right">Hi! <?php echo Auth::User()->firstname; ?>,
+						<span>
+							<a href="<?php echo URL::to('/members/logout'); ?>" style="color: red;font-size: 15px;">Logout</a>
+						</span>
+					</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container">
+	<div class="row">
+		<div class="col-lg-3 col-md-3">
+			<ul class="side-navigation">
+				<li>
+					<a href="<?php echo URL::to('/members/dashboard'); ?>">
+						My Account
+					</a>
+				</li>
+				<li>
+					<a href="<?php echo URL::to('member/participants'); ?>">
+						Joined Event
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="col-lg-9 col-md-9">
+			<div class="account-wrapper">
+				 <?php echo $__env->make('layouts.administrator.includes.error', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+					
+				<table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                        <thead>
+                          <tr>
+                                <th>Event Name</th>
+                                <th>Event Date</th>
+                                <th>Date Registered</th>
+                                <th>Fullname</th>
+                                <th>Number Of Person</th>
+                                <th>Number of Cars</th>
+                                <th>Total Amount</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+
+                            <?php foreach($rsEventParticipants as $list): ?> 
+
+                            <tr>
+                                    <td><?php echo $list->title; ?></td>
+                                <td><?php echo date('F d, Y', strtotime($list->start_date) ); ?></td>
+                                <td><?php echo date('F d, Y', strtotime($list->created_at) ); ?></td>
+
+                                <td><?php echo $list->fullname; ?></td>
+                                <td><?php echo $list->car_person; ?></td>
+                                <td><?php echo $list->no_car; ?></td>
+                                <td><?php echo utilities::getCurrectCurrency($list->amount); ?></td>
+                             
+                            </tr>
+
+                            <?php endforeach; ?>
+                        </tbody>
+                        
+                      </table>
+
+            </div>
+		</div>
+	</div>
+</div>

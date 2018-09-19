@@ -1,0 +1,187 @@
+<!-- SCRIPT -->
+<script type="text/javascript" src="<?php echo asset('assets/js/jquery-1.11.3.min.js'); ?>"></script>
+<script type="text/javascript" src="<?php echo asset('assets/js/bootstrap.js'); ?>"></script>
+<?php if($themingOptions['slider']): ?>
+	<script type="text/javascript" src="<?php echo asset('assets/js/jquery.nivo.slider.js'); ?>"></script>
+	<script type="text/javascript">
+		$(window).load(function() {
+		    $('#slider').nivoSlider({
+		    	controlNav: false,
+		    	directionNav: true,
+		    	animSpeed: 500,
+		    });
+		});
+	</script>
+<?php endif; ?>
+
+<?php if($themingOptions['carousel']): ?>
+	<script type="text/javascript" src="<?php echo asset('assets/js/jquery.bxslider.min.js'); ?>"></script>
+	<script type="text/javascript">
+		
+		jQuery(document).ready(function($){
+		  $('.sponsor-slider').bxSlider({
+		  	  minSlides: 4,
+			  maxSlides: 4,
+			  slideWidth: 360,
+			  slideMargin: 10,
+			  pager: false
+		  });
+		});
+	</script>
+<?php endif; ?>
+
+<?php if($themingOptions['byLaws']): ?>
+	<script type="text/javascript">
+		jQuery(document).ready(function ($) {
+		    //Disable cut copy paste
+		    $('body').bind('cut copy paste', function (e) {
+		        e.preventDefault();
+		    });
+		   
+		    //Disable mouse right click
+		    $("body").on("contextmenu",function(e){
+		        return false;
+		    });
+		});
+		  document.onkeypress = function (event) {
+		        event = (event || window.event);
+		        if (event.keyCode == 123) {
+		           //alert('No F-12');
+		            return false;
+		        }
+		    }
+		    document.onmousedown = function (event) {
+		        event = (event || window.event);
+		        if (event.keyCode == 123) {
+		            //alert('No F-keys');
+		            return false;
+		        }
+		    }
+		document.onkeydown = function (event) {
+		        event = (event || window.event);
+		        if (event.keyCode == 123) {
+		            //alert('No F-keys');
+		            return false;
+		        }
+		    }
+		    $(document).keyup(function(evtobj) {     
+                if (!(evtobj.altKey || evtobj.ctrlKey || evtobj.shiftKey)){
+			    if (evtobj.keyCode == 16) {return false;}
+			                    if (evtobj.keyCode == 17) {return false;}
+			    $("body").append(evtobj.keyCode + " ");
+			                }
+			});
+	</script>
+<?php endif; ?>
+
+<script type="text/javascript" src="<?php echo asset('assets/js/jquery.fancybox.min.js'); ?>"></script>
+
+<?php if($themingOptions['forms']): ?>
+<script type="text/javascript">
+	$(document).ready(function() {
+
+
+		$('#membershipForm').submit(function(){
+
+			var urlRedirection = "<?php echo url('/myaccount/payment'); ?>";
+
+			$pass = document.getElementById('InputPass').value;
+			$confpass = document.getElementById('InputConfPass').value;
+		
+
+			if ($pass == $confpass) {
+				$.ajax({
+			          type: "POST",
+			          url: $(this).attr('action'),
+			          dataType: "json",
+			          data     : $(this).serializeArray(),
+			          success: function(data)
+			          {
+
+			              if (data.status) {   
+			                	
+		                		window.location = urlRedirection + "/" + data.tempid;
+
+
+			                  // alert('Success');
+			                  $('#memberForm #notification-form').empty().show(function() {
+			                    $('#memberForm form').find('input[type="text"], input[type="email"], input[type="tel"], textarea, input[type="password"]').val('');
+			                    $(this).append("<?php echo errorMessage::formSuccess(); ?>");
+			                  });
+
+
+
+			              }   
+			              else  {
+			                  $('#memberForm #notification-form').empty().show(function() {
+			                    $('#memberForm form').find('input[type="text"], input[type="email"], input[type="tel"], textarea, input[type="password"]').val('');
+			                    $(this).append("<?php echo errorMessage::formFailed(); ?>");
+			                  });
+
+			              }
+			          },
+			          error: function() {
+			              
+			          }
+
+			    });
+			} else {
+				$('#notification-form').append("<?php echo errorMessage::formFailed(); ?>");
+			}
+
+		    
+
+		    return false;
+		});		
+	});
+
+	function isNumber(evt) {
+			evt = (evt) ? evt : window.event;
+			var charCode = (evt.which) ? evt.which : evt.keyCode;
+			if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+			    return false;
+			}
+			return true;
+		}
+</script>
+<?php endif; ?>
+<?php if($themingOptions['inquiryforms']): ?>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('#inquiryForm').submit(function(){
+		    $.ajax({
+		          type: "POST",
+		          url: $(this).attr('action'),
+		          dataType: "json",
+		          data     : $(this).serializeArray(),
+		          success: function(data)
+		          {
+
+		              if (data.status) {   
+		                
+		                  // alert('Success');
+		                  $('#inquireForm #notification-form').empty().show(function() {
+		                    $('#inquireForm form').find('input[type="text"], input[type="email"], input[type="tel"], textarea').val('');
+		                    $(this).append("<?php echo errorMessage::inquirySuccess(); ?>");
+		                  });
+
+		              }   
+		              else  {
+		                  $('#inquireForm #notification-form').empty().show(function() {
+		                    $('#inquireForm form').find('input[type="text"], input[type="email"], input[type="tel"], textarea').val('');
+		                    $(this).append("<?php echo errorMessage::formFailed(); ?>");
+		                  });
+
+		              }
+		          },
+		          error: function() {
+		              
+		          }
+
+		    });
+
+		    return false;
+		});
+	});
+</script>
+<?php endif; ?>

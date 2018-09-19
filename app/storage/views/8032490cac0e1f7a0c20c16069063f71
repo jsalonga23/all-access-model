@@ -1,0 +1,45 @@
+<div class="sub-banner">
+	<div class="container-fluid">
+		<div class="row">
+				<img src="<?php echo asset('assets/images/membership.jpg'); ?>" class="img-responsive" alt="RAM Owners Club">
+		</div>
+	</div>
+	<div class="subcaption">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<h3>Reset Password</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container">
+	<div class="row">
+		<div class="col-lg-6 col-md-6 col-sm-6">
+			<div class="form-container" id="memberForm">
+				<div id="notification-form"></div>
+				<?php echo $__env->make('layouts.administrator.includes.error', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+				
+				 <?php echo Form::open(array('url' => 'members/reset/submit','role'=>'form',  'method' => 'post')); ?>
+
+
+		            <fieldset>
+		                <div class="form-group  <?php if($errors->has('username')): ?> has-error <?php endif; ?>">
+		                	<label for="txtUsername">Email Address</label>
+		                    <input class="form-control" id="txtEmailAddress" placeholder="Email Adress" name="txtEmailAddress" type="text" autofocus>
+		                    <?php if($errors->has('txtEmailAddress')): ?> <p class="help-block"><?php echo $errors->first('txtEmailAddress'); ?></p> <?php endif; ?>
+		                </div>
+		               
+		               <input type="submit" class="btn btn-submit btn-primary align-right" value="Submit">
+		            </fieldset>
+		        <?php echo Form::close(); ?>
+
+		        
+			</div>
+		</div>
+		<div class="col-lg-6 col-md-6 col-sm-6">
+			
+		</div>
+	</div>
+</div>

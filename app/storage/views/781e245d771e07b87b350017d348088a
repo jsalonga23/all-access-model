@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <?php echo HTML::style('admin/css/style.css', array('rel' => 'stylesheet'));; ?>
+
+    <link href="https://fonts.googleapis.com/css?family=Carrois+Gothic" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href="<?php echo asset('admin/css/datetimepicker.css'); ?>">
+    <?php echo $__env->make('layouts.administrator.includes.metatags', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+    <?php echo $__env->make('layouts.administrator.includes.dependency', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+</head>
+
+    <body> 
+
+        <div id="wrapper">
+            <?php echo $__env->make('layouts.administrator.includes.navigation', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+            <?php echo $content; ?>
+
+        </div>
+        <!-- /#wrapper -->
+        
+        <?php echo $__env->make('layouts.administrator.includes.footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+    </body>
+    
+</html>

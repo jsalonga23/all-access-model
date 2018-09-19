@@ -1,0 +1,38 @@
+<div class="sub-banner">
+	<div class="container-fluid">
+		<div class="row">
+				<img src="<?php echo asset('assets/images/about.jpg'); ?>" class="img-responsive" alt="RAM Owners Club">
+		</div>
+	</div>
+	<div class="subcaption">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<h3>Event Registration Complete!</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+			
+<div class="container">
+	<div class="row">
+			
+		<div class="col-lg-12 col-md-12 col-sm-12">
+			
+			<div class="eventDesc">
+				Dear Sir, <br/><br/>
+
+				You have successfully registered to that Event. Any futher information, we will contact you via email. <br/><br/> 
+
+				Team Ram Club
+
+			</div>
+		</div>
+
+	
+	</div>
+
+
+</div>

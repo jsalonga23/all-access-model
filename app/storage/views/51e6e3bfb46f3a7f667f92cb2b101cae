@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ROK - UAE</title>
+	<link href="https://fonts.googleapis.com/css?family=Dosis:300,400,500,600,700,800" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+	<link rel="stylesheet" href="<?php echo asset('assets/css/bootstrap.css'); ?>">
+	<link rel="stylesheet" href="<?php echo asset('assets/css/nivo-slider.css'); ?>">
+	<link rel="stylesheet" href="<?php echo asset('assets/css/jquery.fancybox.min.css'); ?>">
+	<link rel="stylesheet" href="<?php echo asset('assets/css/jquery.bxslider.min.css'); ?>">
+	<link rel="stylesheet" href="<?php echo asset('assets/css/style.css'); ?>">
+	<link rel="stylesheet" href="<?php echo asset('assets/css/bootstrapselect.css'); ?>">
+	<link rel="stylesheet" href="<?php echo asset('assets/css/media.css'); ?>">
+	<script src="https://use.fontawesome.com/7497098cc4.js"></script>
+</head>
+<body>
+<div class="wrapper">
+<header>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<nav class="navbar navbar-default">
+					  <div class="container-fluid">
+					    <!-- Brand and toggle get grouped for better mobile display -->
+					    <div class="navbar-header">
+					      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					        <span class="sr-only">Toggle navigation</span>
+					        <span class="icon-bar"></span>
+					        <span class="icon-bar"></span>
+					        <span class="icon-bar"></span>
+					      </button>
+					      <a class="navbar-brand" href="<?php echo URL::to("/"); ?>">
+					      	<img src="<?php echo asset('assets/images/logo.png'); ?>" alt="">
+					      </a>
+					    </div>
+
+					    <!-- Collect the nav links, forms, and other content for toggling -->
+					    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+					      <ul class="nav navbar-nav navbar-right">
+					        <li><a href="<?php echo URL::to('about'); ?>">ABOUT US</a></li>
+					        <li><a href="<?php echo URL::to('events/2017'); ?>">EVENTS</a></li>
+					        <li><a href="<?php echo URL::to('gallery'); ?>">GALLERY</a></li>
+					        <li><a href="<?php echo URL::to('faqs'); ?>">FAQS</a></li>
+					        <li><a href="<?php echo URL::to('membership'); ?>">MEMBERSHIP</a></li>
+							<?php if(!Auth::check()): ?>
+					        	<li><a href="<?php echo URL::to('members/login'); ?>">LOGIN</a></li>
+					        <?php else: ?> 
+					        	<li><a href="<?php echo URL::to('members/dashboard'); ?>">MY ACCOUNT</a></li>
+							<?php endif; ?>
+					        <li><a href="<?php echo URL::to('contact'); ?>">CONTACT</a></li>
+					    </div><!-- /.navbar-collapse -->
+					  </div><!-- /.container-fluid -->
+					</nav>
+			</div>
+		</div>
+	</div>
+</header>
