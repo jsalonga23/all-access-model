@@ -11,7 +11,7 @@ class PageController extends \BaseController {
 	}
 
 	public function register() {
-		$view = View::make('layouts.front.views.pages.registration.register-1');
+		$view = View::make('layouts.front.views.pages.register');
 		$this->layout->themingOptions = data::getThemeOptionsRefences(
 			array(
 						'register'=>true
