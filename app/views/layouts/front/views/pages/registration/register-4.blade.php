@@ -39,8 +39,8 @@
   <div class="col-lg-10"></div>
   <div class="col-lg-2">
     <div class="form-group">
-      <!-- <input type="submit" class="form-control" value="Submit"> -->
-      <button type="button" name="button" data-container="register4" id="btn-reg4">Next</button>
+      <input type="submit" class="form-control" value="Submit">
+      <!-- <button type="button" name="button" data-container="register4" id="btn-reg4">Next</button> -->
     </div>
   </div>
 </div>
