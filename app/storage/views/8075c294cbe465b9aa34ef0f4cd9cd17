@@ -20,22 +20,22 @@
         <?php echo Form::open(array('url' => 'register/submit','role'=>'form',  'method' => 'post')); ?>
 
         <!-- / Register 1 -->
-        <div id="register1">
+        <div id="register1" class="show">
           <?php echo $__env->make('layouts.front.views.pages.registration.register-1', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
         </div>
         <!-- / Register 1 -->
         <!-- / Register 2 -->
-        <div id="register2">
+        <div id="register2" class="hide">
           <?php echo $__env->make('layouts.front.views.pages.registration.register-2', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
         </div>
         <!-- / Register 2 -->
         <!-- / Register 3 -->
-        <div id="register3">
+        <div id="register3" class="hide">
           <?php echo $__env->make('layouts.front.views.pages.registration.register-3', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
         </div>
         <!-- / Register 3 -->
         <!-- / Register 4 -->
-        <div id="register3">
+        <div id="register4" class="hide">
           <?php echo $__env->make('layouts.front.views.pages.registration.register-4', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
         </div>
         <!-- / Register 4 -->

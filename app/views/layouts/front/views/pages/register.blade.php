@@ -19,22 +19,22 @@
         </div>
         {{ Form::open(array('url' => 'register/submit','role'=>'form',  'method' => 'post')) }}
         <!-- / Register 1 -->
-        <div id="register1">
+        <div id="register1" class="show">
           @include('layouts.front.views.pages.registration.register-1')
         </div>
         <!-- / Register 1 -->
         <!-- / Register 2 -->
-        <div id="register2">
+        <div id="register2" class="hide">
           @include('layouts.front.views.pages.registration.register-2')
         </div>
         <!-- / Register 2 -->
         <!-- / Register 3 -->
-        <div id="register3">
+        <div id="register3" class="hide">
           @include('layouts.front.views.pages.registration.register-3')
         </div>
         <!-- / Register 3 -->
         <!-- / Register 4 -->
-        <div id="register3">
+        <div id="register4" class="hide">
           @include('layouts.front.views.pages.registration.register-4')
         </div>
         <!-- / Register 4 -->

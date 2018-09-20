@@ -34,22 +34,29 @@ $(document).ready(function() {
                     });
                 }
             }});
-
-
      /*Add This to Block SHIFT Key*/
-      var shiftClick = jQuery.Event("click");
-      shiftClick.shiftKey = true;
+    var shiftClick = jQuery.Event("click");
+    shiftClick.shiftKey = true;
 
-          $(".multiselect-container li *").click(function(event) {
-              if (event.shiftKey) {
-                 //alert("Shift key is pressed");
-                  event.preventDefault();
-                  return false;
-              }
-              else {
-                  //alert('No shift hey');
-              }
-          });
+    $(".multiselect-container li *").click(function(event) {
+        if (event.shiftKey) {
+           //alert("Shift key is pressed");
+            event.preventDefault();
+            return false;
+        }
+        else {
+            //alert('No shift hey');
+        }
+    });
+
+    // REGISTRATION PROCESS
+    $('.btn-reg').click(function() {
+      var openTab = $(this).data('container');
+      // console.log(openTab);
+      $('.show').addClass('hide').removeClass('show');
+      $('#'+openTab).addClass('show');
+    });
+
 });
 
 </script>

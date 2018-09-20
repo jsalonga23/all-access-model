@@ -119,7 +119,7 @@
   <div class="col-lg-2">
     <div class="form-group">
       <!-- <input type="submit" class="form-control" value="Next"> -->
-      <button type="button" name="button" data-container="register1" id="btn-reg1">Next</button>
+      <button type="button" name="button" class="btn-reg" data-container="register2" id="btn-reg1">Next</button>
     </div>
   </div>
 </div>
