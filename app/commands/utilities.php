@@ -18,6 +18,15 @@ class Utilities {
 		return $str;
 	}
 
+	public static function getAllTalentCategory() {
+		$talentCategory = TalentCategory::all();
+		return $talentCategory;
+	}
+	public static function getAllEthnicity() {
+		$ethnicity = Ethnicity::all();
+		return $ethnicity;
+	}
+
 
 	public static function chkBoxChecked($val)
 	{
@@ -35,7 +44,7 @@ class Utilities {
 		return $adminDetails;
 	}
 
-	
+
 
 	public static function array_to_csv_download($array, $filename = "members.csv", $delimiter=";") {
     header('Content-Type: application/csv');

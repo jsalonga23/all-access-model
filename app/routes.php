@@ -14,6 +14,7 @@
 
 Route::get('/', array('uses' => 'PageController@index'));
 Route::get('/register', array('uses' => 'PageController@register'));
+Route::get('/thank-you', array('uses' => 'PageController@thankyou'));
 
 
 

@@ -14,7 +14,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	 *
 	 * @var string
 	 */
-	protected $table = 'tbl_members';
+	protected $table = 'users';
 
 	/**
 	 * The attributes excluded from the model's JSON form.
@@ -46,17 +46,17 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 			$rsUser->password = Hash::make($input['txtPassword']);
 
 			return $rsUser->save();
-		}	
+		}
 		else
 		{
 			return false;
 		}
-	}	
+	}
 
 	public static function updatePassword()
 	{
 		$input = Input::all();
-	
+
 		$rsUser = User::find(Auth::User()->id);
 		$rsUser->password = Hash::make($input['newpassword']);
 
@@ -64,7 +64,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	}
 
 	public static function ForgetPasswordSendEmailRegistration()
-	{	
+	{
 		$input = Input::all();
 
 		$rsUsers = User::where('email', '=', $input['txtEmailAddress'])->first();
@@ -74,7 +74,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 		$findUser = User::find($rsUsers->id);
 		$findUser->confirm_code = $confirm_code;
 		$findUser->save();
-		
+
 		if ($findUser) {
 
 			$data = array('firstname'=> ucfirst($rsUsers->firstname), 'confirm_code' => $confirm_code);
@@ -87,8 +87,8 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 			return 1;
 
 		}
-		else 
-		{	
+		else
+		{
 			return 0;
 		}
 	}

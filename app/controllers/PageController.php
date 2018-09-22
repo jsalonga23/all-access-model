@@ -17,7 +17,18 @@ class PageController extends \BaseController {
 						'register'=>true
 				)
 			);
-		$this->layout->pagename= "home";
+		$view->rsTalentCategory= Utilities::getAllTalentCategory();
+		$view->rsEthnicity= Utilities::getAllEthnicity();
+		$this->layout->pagename= "register";
+		$this->layout->content = $view;
+
+	}
+	public function thankyou() {
+		$view = View::make('layouts.front.views.pages.thankyou');
+		$this->layout->themingOptions = data::getThemeOptionsRefences(
+			array()
+			);
+		$this->layout->pagename= "thankyou";
 		$this->layout->content = $view;
 
 	}

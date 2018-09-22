@@ -15,6 +15,7 @@
         <div class="row">
           <div class="col-lg-12">
             <h3><span class="red">*</span>Register Now</h3>
+            @include('layouts.front.includes.error')
           </div>
         </div>
         {{ Form::open(array('url' => 'register/submit','role'=>'form',  'method' => 'post')) }}

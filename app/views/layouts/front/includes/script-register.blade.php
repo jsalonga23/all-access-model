@@ -49,12 +49,35 @@ $(document).ready(function() {
         }
     });
 
+    $('#features').multiselect({
+          enableFiltering: false,
+          buttonWidth: '100%',
+          maxHeight:400,
+          enableCaseInsensitiveFiltering:false,
+          nonSelectedText: 'Please select features',
+          numberDisplayed: 2,
+          selectAll: false
+        });
+
     // REGISTRATION PROCESS
-    $('.btn-reg').click(function() {
+    $('.btn-reg').click(function(e) {
+      e.preventDefault();
       var openTab = $(this).data('container');
-      // console.log(openTab);
-      $('.show').addClass('hide').removeClass('show');
-      $('#'+openTab).addClass('show');
+      var inputValidate = true;
+      var isChecked = $('#chkSelect').prop('checked');
+      if(isChecked) {
+        $(".show .required").each(function(index, element) {
+
+          if ($(element).val() == "") {
+            inputValidate = false;
+          }
+        });
+        if(inputValidate) {
+          $('.show').addClass('hide').removeClass('show');
+          $('#'+openTab).addClass('show');
+        }
+      }
+
     });
 
 });
