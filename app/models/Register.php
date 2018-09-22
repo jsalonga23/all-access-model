@@ -83,32 +83,20 @@ class Register extends Eloquent {
 			$status = DB::table('tbl_profession_mapping')->insert(array('user' => $rsUser->id, 'category' => $profession));
 		}
 
-		return $status;
-	}
-
-	public static function UpdateCommittee() {
-
-		$input = Input::all();
-
-		// utilities::debug($input,1);
-
-		$rsCommittee = Committee::find($input['txtId']);
-
-		$rsCommittee->name = $input['txtFullname'];
-		$rsCommittee->designation = $input['txtDesignation'];
-		$rsCommittee->description = $input['txtDescription'];
-		$rsCommittee->email = $input['txtEmail'];
-		$rsCommittee->mobile = $input['txtMobile'];
-
-		if(isset($input['file'])) {
-			$rsCommittee->image = $input['file']->getClientOriginalName();
-			photoImage::ProcessCommitteeImage();
+		if($status) {
+			//static::sendEmail($input);
 		}
-		$status = $rsCommittee->save();
 
 		return $status;
 	}
 
+	public static function sendEmail($input) {
+		$status = Mail::send('emails.forgotpassword', $data, function($message) use ($rsUsers) {
+				$message->from('info@creativouae.com', 'Reset Password');
+						$message->to("salonga.john23@gmail.com","All Access Team")->subject('All Access | Registration Completed');
+		});
+
+	}
 
 
 }

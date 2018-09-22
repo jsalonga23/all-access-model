@@ -134,7 +134,7 @@
               <option value="Hand Model">Hand Model</option>
               <option value="Piercing">Piercing</option>
               <option value="Plus Size">Plus Size</option>
-              <option value="racticing Sports">Practicing Sports</option>
+              <option value="Practicing Sports">Practicing Sports</option>
               <option value="Tattoos">Tattoos</option>
               <option value="Twins">Twins</option>
               <option value="Triplets">Triplets</option>
