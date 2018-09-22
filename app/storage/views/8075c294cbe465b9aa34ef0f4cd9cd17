@@ -18,7 +18,7 @@
             <?php echo $__env->make('layouts.front.includes.error', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
           </div>
         </div>
-        <?php echo Form::open(array('url' => 'register/submit','role'=>'form',  'method' => 'post')); ?>
+        <?php echo Form::open(array('url' => 'register/submit','role'=>'form',  'method' => 'post', 'enctype'=>'multipart/form-data')); ?>
 
         <!-- / Register 1 -->
         <div id="register1" class="show">

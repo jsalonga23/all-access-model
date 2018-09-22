@@ -10,17 +10,17 @@
 <div class="row">
   <div class="col-lg-6">
     <label for="inputFile"><span class="red">*</span>Main Profile Photo</label>
-    <button type="button" class="btn btn-primary btn-block" onclick="document.getElementById('inputFile').click()">Upload Photo</button>
+    <input type="file" class="form-control-file text-primary font-weight-bold" required name="profilePhoto" id="profilePhoto" accept="image/*"  data-title="Upload Photo">
   </div>
   <div class="col-lg-6">
     <div class="form-group inputDnD">
       <label for="inputFile"><span class="red">*</span>Portfolio Photo/s</label>
-      <input type="file" class="form-control-file text-primary font-weight-bold" id="inputFile" accept="image/*" onchange="readUrl(this)" data-title="Drag and drop a file">
+      <input type="file" class="form-control-file text-primary font-weight-bold"  name="profileImages[]" multiple id="inputFile" accept="image/*" data-title="Drag and drop a file">
     </div>
   </div>
 </div>
 
-<div class="row">
+<!-- <div class="row">
   <div class="col-lg-6">
     <div class="form-group inputDnD">
       <label for="inputFile"><span class="red">*</span>Portfolio Audio/s</label>
@@ -33,7 +33,7 @@
       <input type="file" class="form-control-file text-primary font-weight-bold" id="inputFile" accept="image/*" onchange="readUrl(this)" data-title="Drag and drop a file">
     </div>
   </div>
-</div>
+</div> -->
 
 <div class="row button">
   <div class="col-lg-10"></div>

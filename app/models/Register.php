@@ -32,7 +32,7 @@ class Register extends Eloquent {
 
 		$input = Input::all();
 
-		// utilities::debug($input,1);
+		// utilities::debug($input['profilePhoto'],1);
 		$features = '';
 		if(isset($input['features'])) {
 			$features = implode(", ",$input['features']);
@@ -73,10 +73,12 @@ class Register extends Eloquent {
 		$rsUser->instagram = $input['instagram'];
 		$rsUser->features = $features;
 
-		// if(isset($input['file'])) {
-		// 	$rsUser->image = $input['file']->getClientOriginalName();
-		// 	photoImage::ProcessCommitteeImage();
-		// }
+		if(isset($input['profilePhoto'])) {
+
+			$newFilename = photoImage::ProcessMainProfile();
+			$rsUser->image = $newFilename;
+
+		}
 		$status = $rsUser->save();
 
 		foreach($input['profession'] as $profession) {

@@ -18,7 +18,7 @@
             @include('layouts.front.includes.error')
           </div>
         </div>
-        {{ Form::open(array('url' => 'register/submit','role'=>'form',  'method' => 'post')) }}
+        {{ Form::open(array('url' => 'register/submit','role'=>'form',  'method' => 'post', 'enctype'=>'multipart/form-data')) }}
         <!-- / Register 1 -->
         <div id="register1" class="show">
           @include('layouts.front.views.pages.registration.register-1')

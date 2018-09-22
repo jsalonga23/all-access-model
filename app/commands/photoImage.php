@@ -15,7 +15,7 @@ class PhotoImage {
 		$newFilename = "";
 		// utilities::debug($file,1);
 		if (Input::file('file')->isValid())
-		{	
+		{
 			$size = Input::file('file')->getSize();
 			try  {
 
@@ -26,7 +26,7 @@ class PhotoImage {
 				$status = Input::file('file')->move($fileDirectory , $newFilename);
 
 			} catch(\exception $e){
-				
+
 				echo $e->getMessage();
 				die();
 			}
@@ -41,7 +41,7 @@ class PhotoImage {
 		$newFilename = "";
 		// utilities::debug($file,1);
 		if (Input::file('file')->isValid())
-		{	
+		{
 			$size = Input::file('file')->getSize();
 			try  {
 
@@ -59,7 +59,7 @@ class PhotoImage {
 					if (!file_exists($smallPath)) {
 					    mkdir($smallPath, 0777, true);
 					}
-			
+
 					$smallPath = public_path().static::$PathDirectory.'/small/'.$newFilename;
 
 					$img = Image::make($fileDirectory.$newFilename);
@@ -72,9 +72,9 @@ class PhotoImage {
 					$img->save($smallPath);
 
 				}
-				
+
 			} catch(\exception $e){
-				
+
 				echo $e->getMessage();
 				die();
 			}
@@ -88,7 +88,7 @@ class PhotoImage {
 		$fileDirectory = "";
 		$newFilename = "";
 		// utilities::debug($file,1);
-		if (Input::file('filepdf')->isValid()) {	
+		if (Input::file('filepdf')->isValid()) {
 
 			$size = Input::file('filepdf')->getSize();
 			try  {
@@ -100,7 +100,7 @@ class PhotoImage {
 				$status = Input::file('filepdf')->move($fileDirectory , $newFilename);
 
 			} catch(\exception $e){
-				
+
 				echo $e->getMessage();
 				die();
 			}
@@ -110,25 +110,25 @@ class PhotoImage {
 	}
 
 
-	public static function ProcessCommitteeImage() {
+	public static function ProcessMainProfile() {
 
-		$file = $_FILES['file'];
+		$file = $_FILES['profilePhoto'];
 		$fileDirectory = "";
 		$newFilename = "";
 		// utilities::debug($file,1);
-		if (Input::file('file')->isValid())
-		{	
-			$size = Input::file('file')->getSize();
+		if (Input::file('profilePhoto')->isValid())
+		{
+			$size = Input::file('profilePhoto')->getSize();
 			try  {
 
 				$ext = File::extension($file['name']);
 				$newFilename =  $file['name'];
 
-				$fileDirectory = public_path().'/assets/images/team/';
-				$status = Input::file('file')->move($fileDirectory , $newFilename);
+				$fileDirectory = public_path().'/assets/images/mainProfile/';
+				$status = Input::file('profilePhoto')->move($fileDirectory , $newFilename);
 
 			} catch(\exception $e){
-				
+
 				echo $e->getMessage();
 				die();
 			}
@@ -136,13 +136,13 @@ class PhotoImage {
 		return $newFilename;
 	}
 
-	
+
 	public static function removeFileGallery($filename,$year,$month,$eventId) {
 		$fileDirectory = public_path().static::$PathDirectory.$year."/".$month."/".$eventId."/".$filename;
 		// utilities::debug($fileDirectory,1);
-		File::delete($fileDirectory);		
+		File::delete($fileDirectory);
 	}
 
-	
-	
+
+
 }
